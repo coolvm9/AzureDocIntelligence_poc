@@ -14,8 +14,8 @@ import java.util.List;
 public class DocIntelligence {
 
     // set `<your-endpoint>` and `<your-key>` variables with the values from the Azure portal
-    private static final String endpoint = "https://satyadocai.cognitiveservices.azure.com/";
-    private static final String key = "9d432fd46b9a47b7a834ba86eb4a4863";
+    private static final String endpoint = "";
+    private static final String key = "";
 
     public static void main(String[] args) {
 
