@@ -1,0 +1,25 @@
+<configuration>
+
+    <!-- Console appender configuration -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Set the root logger level to DEBUG -->
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Set logger for com.azure.ai.documentintelligence to DEBUG level -->
+    <logger name="com.azure.ai.documentintelligence" level="debug" additivity="false">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+    <!-- Set other package-specific log levels if necessary -->
+    <!-- <logger name="com.azure.core" level="debug" additivity="false">
+        <appender-ref ref="CONSOLE" />
+    </logger> -->
+
+</configuration>

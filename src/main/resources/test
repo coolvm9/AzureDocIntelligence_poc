@@ -1,0 +1,6 @@
+curl -X POST "https://docaiintelligence.cognitiveservices.azure.com/formrecognizer/documentModels/prebuilt-invoice:analyze?api-version=2023-07-31" \
+-H "Ocp-Apim-Subscription-Key: ca77f9202b624cd4a6abed2b9cc8b239" \
+-H "Content-Type: application/json" \
+--data-raw '{
+  "urlSource": "https://raw.githubusercontent.com/Azure-Samples/cognitive-services-REST-api-samples/master/curl/form-recognizer/sample-invoice.pdf"
+}'
