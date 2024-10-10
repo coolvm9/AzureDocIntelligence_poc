@@ -1,4 +1,4 @@
-package com.fusion;
+package com.fusion.azure;
 
 import com.azure.ai.documentintelligence.DocumentIntelligenceClient;
 import com.azure.ai.documentintelligence.DocumentIntelligenceClientBuilder;
@@ -76,7 +76,7 @@ public class AZDocIntelligenceAsync {
                 AnalyzeResult analyzeLayoutResult = analyzeLayoutResultPoller.getFinalResult();
 
                 // Print the result (you can further process it as needed)
-                System.out.println("Analyze Result: " + analyzeLayoutResult);
+                System.out.println("Analyze Result: " + analyzeLayoutResult.toJsonString());
             } else {
                 System.out.println("Analysis failed or timed out.");
             }

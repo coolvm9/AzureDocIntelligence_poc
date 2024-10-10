@@ -1,4 +1,4 @@
-package com.fusion;
+package com.fusion.azure;
 
 import com.azure.ai.documentintelligence.DocumentIntelligenceClient;
 import com.azure.ai.documentintelligence.DocumentIntelligenceClientBuilder;
