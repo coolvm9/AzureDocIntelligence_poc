@@ -13,7 +13,9 @@ dependencies {
     // https://mvnrepository.com/artifact/com.azure/azure-ai-documentintelligence
     implementation 'com.azure:azure-ai-documentintelligence:1.0.0-beta.4'
 
-    implementation 'com.google.cloud:google-cloud-document-ai:2.5.0'
+    // Add the Google Cloud BOM
+    implementation platform('com.google.cloud:libraries-bom:26.50.0')
+    implementation 'com.google.cloud:google-cloud-document-ai'
 
     implementation 'org.slf4j:slf4j-api:1.7.32'
     implementation 'ch.qos.logback:logback-classic:1.2.3'

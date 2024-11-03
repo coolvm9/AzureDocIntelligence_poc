@@ -1,0 +1,11 @@
+name: Set Environment Variables
+on: [push]
+jobs:
+  setup-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set environment variables
+        run: echo "Environment variables set"
+        env:
+          AZURE_ENDPOINT: ${{ secrets.AZURE_ENDPOINT }}
+          AZURE_DOC_AI_KEY: ${{ secrets.AZURE_DOC_AI_KEY }}

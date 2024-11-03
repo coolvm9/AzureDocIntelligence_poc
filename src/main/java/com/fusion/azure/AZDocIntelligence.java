@@ -23,7 +23,8 @@ public class AZDocIntelligence {
             // Define the path to the external properties file
             String externalConfigPath = "/Users/satyaanumolu/POCs/cloudprops/azure.props";
 
-
+//            String endpoint = System.getenv("AZURE_ENDPOINT");
+//            System.out.println(endpoint);
             // Load properties from the external file
             Properties prop = new Properties();
             try (FileInputStream input = new FileInputStream(externalConfigPath)) {
@@ -68,6 +69,7 @@ public class AZDocIntelligence {
             // Print JSON output
             System.out.println("JSON Output:");
 //            analyzeLayoutResult.toJson(System.out);
+
             printGeometricAndLogicalRoles(analyzeLayoutResult);
 
         }catch (Exception e) {
