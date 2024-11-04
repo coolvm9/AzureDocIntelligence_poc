@@ -1,10 +1,8 @@
-package com.fusion.azure;
+package dev.fusion;
 
 import com.azure.ai.documentintelligence.DocumentIntelligenceClient;
 import com.azure.ai.documentintelligence.DocumentIntelligenceClientBuilder;
-import com.azure.ai.documentintelligence.models.AnalyzeDocumentRequest;
-import com.azure.ai.documentintelligence.models.AnalyzeResult;
-import com.azure.ai.documentintelligence.models.AnalyzeResultOperation;
+import com.azure.ai.documentintelligence.models.*;
 import com.azure.core.credential.AzureKeyCredential;
 import com.azure.core.util.BinaryData;
 import com.azure.core.util.polling.PollResponse;
@@ -74,9 +72,31 @@ public class AZDocIntelligenceAsync {
             if (pollResponse.getStatus().isComplete()) {
                 System.out.println("Analysis completed.");
                 AnalyzeResult analyzeLayoutResult = analyzeLayoutResultPoller.getFinalResult();
-
                 // Print the result (you can further process it as needed)
                 System.out.println("Analyze Result: " + analyzeLayoutResult.toJsonString());
+                // Print Page Details
+                analyzeLayoutResult.getPages().forEach(page -> {
+                    System.out.println("Page Number: " + page.getPageNumber());
+                    page.getLines().forEach(line -> {
+                        System.out.println("Line: " + line.getContent());
+                    });
+                });
+
+                // Print Paragraphs
+                analyzeLayoutResult.getParagraphs().forEach(paragraph -> {
+                    System.out.println("Paragraph: " + paragraph.getContent() + ", Role : " + paragraph.getRole());
+                });
+                // Print Tables
+                analyzeLayoutResult.getTables().forEach(table -> {
+                    System.out.println("Table with " + table.getRowCount() + " rows and " + table.getColumnCount() + " columns");
+                    table.getCells().forEach(cell -> {
+                        System.out.println("Cell Row: " + cell.getRowIndex() +
+                                ", Column: " + cell.getColumnIndex() +
+                                ", Content: " + cell.getContent());
+                    });
+                });
+
+
             } else {
                 System.out.println("Analysis failed or timed out.");
             }
