@@ -58,6 +58,8 @@ public class AZDocIntelligenceAsync {
                             null,
                             new AnalyzeDocumentRequest().setBase64Source(Files.readAllBytes(file.toPath())));
 
+
+
             // Poll the operation until it is complete
             PollResponse<AnalyzeResultOperation> pollResponse;
             do {

@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9b0ab78-d546-4f70-b1f7-5fa0f7f94d70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/results/financial_report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/results/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/results/result.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fusion/azure/AZDocIntelligence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fusion/azure/AZDocIntelligenceAsync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligenceAsync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fusion/azure/DocIntelligence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fusion/gcp/GCPDocIntelligence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligenceAsync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligenceAsync.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/results/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/results/output.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +42,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.AzureDocIntelligence_poc [:AZDocIntelligence.main()].executor": "Debug",
-    "Gradle.AzureDocIntelligence_poc [:AZDocIntelligenceAsync.main()].executor": "Debug",
+    "Gradle.AzureDocIntelligence_poc [:AZDocIntelligenceAsync.main()].executor": "Run",
     "Gradle.AzureDocIntelligence_poc [:DocIntelligence.main()].executor": "Run",
     "Gradle.Build AzureDocIntelligence_poc.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -105,12 +99,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligenceAsync.java</url>
-          <line>86</line>
+          <line>88</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligenceAsync.java</url>
-          <line>72</line>
+          <line>74</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
