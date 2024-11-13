@@ -1,5 +1,6 @@
 package dev.fusion;
 
+import com.azure.ai.documentintelligence.DocumentIntelligenceAsyncClient;
 import com.azure.ai.documentintelligence.DocumentIntelligenceClient;
 import com.azure.ai.documentintelligence.DocumentIntelligenceClientBuilder;
 import com.azure.ai.documentintelligence.models.*;
@@ -38,6 +39,12 @@ public class AZDocIntelligenceAsync {
                     .credential(new AzureKeyCredential(key))
                     .endpoint(endpoint)
                     .buildClient();
+            // Use this https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/documentintelligence/azure-ai-documentintelligence/src/samples/java/com/azure/ai/documentintelligence/AnalyzeLayoutAsync.java
+
+           /* DocumentIntelligenceAsyncClient asyncClient = new DocumentIntelligenceClientBuilder()
+                    .credential(new AzureKeyCredential(key))
+                    .endpoint(endpoint)
+                    .buildAsyncClient();*/
 
             // Load the PDF file
             File file = new File(DocumentIntelligenceClient.class.getClassLoader().getResource("sample-layout.pdf").getFile());
