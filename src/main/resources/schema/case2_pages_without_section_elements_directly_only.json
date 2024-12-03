@@ -1,0 +1,27 @@
+{
+  "Document": {
+    "metadata": {
+      "document_id": "456",
+      "file_name": "report.docx",
+      "author": "Bob"
+    },
+    "security": {
+      "readonly": ["HRDept", "AdminDept"]
+    },
+    "pages": [
+      {
+        "metadata": {
+          "page_number": 1,
+          "page_title": "Summary"
+        },
+        "elements": [
+          {
+            "id": "elem1",
+            "element_type": "table",
+            "content": "This is a table directly on the page."
+          }
+        ]
+      }
+    ]
+  }
+}

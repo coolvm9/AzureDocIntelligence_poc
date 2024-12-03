@@ -1,0 +1,35 @@
+{
+  "Document": {
+    "metadata": {
+      "document_id": "123",
+      "file_name": "example.pdf",
+      "author": "Alice"
+    },
+    "security": {
+      "readonly": ["FinanceDept", "LegalDept"]
+    },
+    "pages": [
+      {
+        "metadata": {
+          "page_number": 1,
+          "page_title": "Introduction"
+        },
+        "sections": [
+          {
+            "metadata": {
+              "section_order": 1,
+              "section_title": "Section 1"
+            },
+            "elements": [
+              {
+                "id": "sec1_elem1",
+                "element_type": "paragraph",
+                "content": "This is content in Section 1."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

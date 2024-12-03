@@ -1,0 +1,27 @@
+{
+  "Document": {
+    "metadata": {
+      "document_id": "789",
+      "file_name": "policies.pdf",
+      "author": "Charlie"
+    },
+    "security": {
+      "readonly": ["ITDept", "Operations"]
+    },
+    "sections": [
+      {
+        "metadata": {
+          "section_order": 1,
+          "section_title": "Policy Overview"
+        },
+        "elements": [
+          {
+            "id": "elem1",
+            "element_type": "visual element",
+            "content": "This is a visual element in the section."
+          }
+        ]
+      }
+    ]
+  }
+}

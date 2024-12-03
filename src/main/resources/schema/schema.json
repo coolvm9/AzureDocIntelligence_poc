@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "Document": {
+      "type": "object",
+      "properties": {
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "document_id": { "type": "string" },
+            "version_id": { "type": "string" },
+            "file_name": { "type": "string" },
+            "source": { "type": "string" },
+            "document_title": { "type": "string" },
+            "document_summary": { "type": "string" },
+            "author": { "type": "string" },
+            "keywords": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "required": ["document_id", "file_name"]
+        },
+        "security": {
+          "type": "object",
+          "properties": {
+            "readonly": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Groups or metadata defining read-only access"
+              },
+              "description": "Defines users or groups with read-only permissions"
+            }
+          },
+          "required": ["readonly"],
+          "additionalProperties": false
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "page_number": { "type": "integer" },
+                  "page_title": { "type": "string" }
+                }
+              },
+              "elements": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string", "description": "Unique identifier for the element" },
+                    "element_type": {
+                      "type": "string",
+                      "enum": ["paragraph", "table", "visual element", "others"],
+                      "description": "Type of the element"
+                    },
+                    "content": { "type": "string", "description": "Content of the element" }
+                  },
+                  "required": ["id", "element_type", "content"]
+                }
+              },
+              "sections": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "metadata": {
+                      "type": "object",
+                      "properties": {
+                        "section_order": { "type": "integer" },
+                        "section_title": { "type": "string" }
+                      },
+                      "required": ["section_order"]
+                    },
+                    "elements": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": { "type": "string", "description": "Unique identifier for the element" },
+                          "element_type": {
+                            "type": "string",
+                            "enum": ["paragraph", "table", "visual element", "others"],
+                            "description": "Type of the element"
+                          },
+                          "content": { "type": "string", "description": "Content of the element" }
+                        },
+                        "required": ["id", "element_type", "content"]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": { "sections": { "type": "array" } },
+                  "required": ["sections"]
+                },
+                "then": { "not": { "required": ["elements"] } }
+              }
+            ]
+          }
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metadata": {
+                "type": "object",
+                "properties": {
+                  "section_order": { "type": "integer" },
+                  "section_title": { "type": "string" }
+                },
+                "required": ["section_order"]
+              },
+              "elements": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string", "description": "Unique identifier for the element" },
+                    "element_type": {
+                      "type": "string",
+                      "enum": ["paragraph", "table", "visual element", "others"],
+                      "description": "Type of the element"
+                    },
+                    "content": { "type": "string", "description": "Content of the element" }
+                  },
+                  "required": ["id", "element_type", "content"]
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": ["metadata", "security"],
+      "anyOf": [
+        { "required": ["pages"] },
+        { "required": ["sections"] }
+      ]
+    }
+  },
+  "required": ["Document"]
+}

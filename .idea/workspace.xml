@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9b0ab78-d546-4f70-b1f7-5fa0f7f94d70" name="Changes" comment="" />
+    <list default="true" id="c9b0ab78-d546-4f70-b1f7-5fa0f7f94d70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sample10kpage.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema/case1_pages_with_nested_sections.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema/case2_pages_without_section_elements_directly_only.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema/case3_top_level_sections.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligenceAsync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligenceAsync.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,16 +51,17 @@
     "Gradle.Build AzureDocIntelligence_poc.executor": "Run",
     "Gradle.Download Sources.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.google.cloudcode.ide_session_index": "20241103_0000",
+    "com.google.cloudcode.ide_session_index": "20241128_0001",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/satyaanumolu/POCs/AzureDocIntelligence_poc/src/main/resources",
+    "last_opened_file_path": "/Users/satyaanumolu/POCs/AzureDocIntelligence_poc/src/main/resources/schema",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/schema" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
@@ -103,12 +111,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligenceAsync.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligenceAsync.java</url>
-          <line>74</line>
+          <line>94</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
