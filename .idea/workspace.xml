@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9b0ab78-d546-4f70-b1f7-5fa0f7f94d70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sample10kpage.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema/case1_pages_with_nested_sections.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema/case2_pages_without_section_elements_directly_only.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema/case3_top_level_sections.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligenceAsync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/fusion/AZDocIntelligenceAsync.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
