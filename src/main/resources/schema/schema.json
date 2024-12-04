@@ -18,9 +18,14 @@
             "keywords": {
               "type": "array",
               "items": { "type": "string" }
+            },
+            "publish_date": {
+              "type": "string",
+              "format": "date",
+              "description": "The publish date of the document in ISO 8601 format (YYYY-MM-DD)"
             }
           },
-          "required": ["document_id", "file_name"]
+          "required": ["document_id", "file_name", "publish_date"]
         },
         "security": {
           "type": "object",
